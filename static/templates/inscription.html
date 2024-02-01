@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Inscription page</title>
+    <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/inscription.css">
+  </head>
+  <body>
+    <div class="main">
+      <div class="container a-container" id="a-container">
+          <form method="post" action ="../../server/inscription.php">
+            <h2 class="switch__title title">Bienvenue  !</h2>
+            <input class="form__input" type="text" name="firstname" placeholder=" Firstname">
+            <input class="form__input" type="text" name="lastname" placeholder="Lastname">
+            <input class="form__input" type="text" name="username" placeholder="Username">
+            <input class="form__input" type="text" name="phone" placeholder="Phone">
+            <input class="form__input" type="text" name="email" placeholder="Email">
+            <input class="form__input" type="password" name="password" placeholder="Mot de Passe">
+            <input class="form__input" type="password" name="check-psw" placeholder="Confirmer mot de passe">
+            <!--<button class="switch__button button switch-btn" name="submit">S'INSCRIRE</button> -->
+            <input type="submit" value="INSCRIRE" name='send' autocomplete="off" class="switch__button button switch-btn">
+          </form>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>

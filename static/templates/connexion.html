@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/connexion.css">
+  </head>
+  <body>
+    <div class="main">
+      <div class="container a-container" id="a-container">
+        <form class="form" id="a-form" method="" action="">
+          <form action ="post" href="../server/connexion.php">
+          <h2 class="form_title title">De retour !</h2>
+          <input class="form__input" type="text" name="uname" placeholder="Email">
+          <input class="form__input" type="password" name="psw" placeholder="Mot de Passe">
+          <button class="form__button button submit" name="submit">SE CONNECTER</button>
+        </form>
+      </div>
+      <div class="container b-container" id="b-container">
+        <form class="form" id="b-form" method="" action="">
+          <h2 class="form_title title">Connectez-vous au site Web</h2>
+          <input class="form__input" type="text" placeholder="Email">
+          <input class="form__input" type="password" placeholder="Mot de Passe"><a class="form__link">Mot de Passe oublié?</a>
+          <button class="form__button button submit">S'INSCRIRE</button>
+        </form>
+      </div>
+      <div class="switch" id="switch-cnt">
+        <div class="switch__circle"></div>
+        <div class="switch__circle switch__circle--t"></div>
+        <div class="switch__container" id="switch-c1">
+          <h2 class="switch__title title">Bienvenue  !</h2>
+          <button class="switch__button button switch-btn">S'INSCRIRE</button>
+        </div>
+        <div class="switch__container is-hidden" id="switch-c2">
+          <h2 class="switch__title title">De retour !</h2>
+          <p> Créer un compte ! </p>
+          <button class="switch__button button switch-btn">SE CONNECTER</button>
+        </div>
+      </div>
+    </div>
+    <script  src="./connexion.js"></script>
+  </body>
+</html>
