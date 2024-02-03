@@ -1,5 +1,6 @@
 <?php 
     include "../../server/mainpage.php";
+
 ?>
 
 <!DOCTYPE html>

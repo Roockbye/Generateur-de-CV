@@ -5,8 +5,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Connexion</title>
     <meta charset="UTF-8">
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/connexion.css">
   </head>
   <body>
@@ -17,7 +18,9 @@
           <input class="form__input" type="text" name="username" autocomplete="off" placeholder="Username">
           <input class="form__input" type="text" name="email" autocomplete="off" placeholder="Email">
           <input class="form__input" type="password" name="password" autocomplete="off" placeholder="Mot de Passe">
+          <div>
           <button class="form__button button submit" name="submit">SE CONNECTER</button>
+          </div>
         </form>
       </div>
       <div class="container b-container" id="b-container">
