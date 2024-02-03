@@ -8,13 +8,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title></title>
+        <title>Home</title>
         <link type="text/css" ref="stylesheet" href="../css/mainpage.css">
     </head>
     <body>
         <div class="header">
             <h1>CV Maker</h1>
             <p> Responsive layout</p>
+            <a href="../../server/deconnexion.php"><button>Se déconnecter</button></a>
         </div>
 
         <div class="topnav">
