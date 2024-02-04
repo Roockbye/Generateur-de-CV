@@ -29,7 +29,7 @@
         <div class="switch__circle"></div>
         <div class="switch__circle switch__circle--t"></div>
         <div class="switch__container" id="switch-c1">
-        <form action ="post" href="../../server/inscription.php">
+        <form method="post" action="inscription.php">
           <h2 class="switch__title title">Bienvenue  !</h2>
           <button class="switch__button button switch-btn" name="inscription">S'INSCRIRE</button>
         </form>

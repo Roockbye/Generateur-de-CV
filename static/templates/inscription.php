@@ -22,7 +22,7 @@
             <input class="form__input" type="text" name="email" autocomplete="off" placeholder="Email">
             <input class="form__input" type="password" name="password" autocomplete="off" placeholder="Mot de Passe">
             <input class="form__input" type="password" name="check-psw" autocomplete="off" placeholder="Confirmer mot de passe">
-            <input type="submit" value="S'INSCRIRE" name='submit' autocomplete="off" class="switch__button button switch-btn">
+            <button class="switch__button button switch-btn" type="submit" name='submit'>S'INSCRIRE</button>
         </form>
       </div>
       </div>
