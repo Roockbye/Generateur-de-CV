@@ -31,31 +31,31 @@
                 <h2>Informations de base</h2>
                 <div class="form-row">
                     <label for="name">Nom:</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" autocomplete="off" required>
                 </div>
                 <div class="form-row">
                     <label for="firstname">Prénom:</label>
-                    <input type="text" id="firstname" name="firstname" required>
+                    <input type="text" id="firstname" name="firstname" autocomplete="off" required>
                 </div>
                 <div class="form-row">
                     <label for="titre">Titre:</label>
-                    <input type="text" id="titre" name="titre">
+                    <input type="text" id="titre" name="titre" autocomplete="off">
                 </div>
                 <div class="form-row">
                     <label for="address">Adresse:</label>
-                    <input type="text" id="address" name="address" required>
+                    <input type="text" id="address" name="address" autocomplete="off" required>
                 </div>
                 <div class="form-row">
                     <label for="phone">Téléphone:</label>
-                    <input type="text" id="phone" name="phone" required>
+                    <input type="text" id="phone" name="phone" autocomplete="off" required>
                 </div>
                 <div class="form-row">
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" autocomplete="off" required>
                 </div>
                 <div class="form-row">
                     <label for="apropos">A propos de moi:</label>
-                    <textarea id="apropos" name="apropos"></textarea>
+                    <textarea id="apropos" name="apropos" autocomplete="off"></textarea>
                 </div>
             </div>
 
@@ -64,7 +64,7 @@
                 <h2>Compétences</h2>
                 <div class="form-row">
                     <label for="skills">Entrez vos compétences, séparées par une virgule:</label>
-                    <input type="text" id="skills" name="skills" required>
+                    <input type="text" id="skills" name="skills" autocomplete="off" required>
                 </div>
             </div>
 
@@ -74,22 +74,22 @@
                 <div id="work-experience">
                     <div class="form-row">
                         <label for="company">Nom de l'entreprise:</label>
-                        <input type="text" id="company" name="company" required>
+                        <input type="text" id="company" name="company" autocomplete="off" required>
                         <div class="form-row">
                         <label for="position">Poste occupé:</label>
-                        <input type="text" id="position" name="position" required>
+                        <input type="text" id="position" name="position" autocomplete="off" required>
                     </div>
                     <div class="form-row">
                         <label for="start-date">Date de début:</label>
-                        <input type="date" id="start-date" name="start-date" required>
+                        <input type="date" id="start-date" name="start_date" autocomplete="off" required>
                     </div>
                     <div class="form-row">
                         <label for="end-date">Date de fin:</label>
-                        <input type="date" id="end-date" name="end-date" required>
+                        <input type="date" id="end-date" name="end_date" autocomplete="off" required>
                     </div>
                     <div class="form-row">
                         <label for="description">Description des tâches:</label>
-                        <textarea id="description" name="description" required></textarea>
+                        <textarea id="description" name="description" autocomplete="off" required></textarea>
                     </div>
                 </div>
                 <button type="button" id="add-work-experience">Ajouter une expérience de travail</button>
@@ -101,23 +101,23 @@
                 <div id="education">
                     <div class="form-row">
                         <label for="school">Nom de l'école:</label>
-                        <input type="text" id="school" name="school" required>
+                        <input type="text" id="school" name="school" autocomplete="off" required>
                     </div>
                     <div class="form-row">
                         <label for="degree">Diplôme obtenu:</label>
-                        <input type="text" id="degree" name="degree" required>
+                        <input type="text" id="degree" name="degree" autocomplete="off" required>
                     </div>
                     <div class="form-row">
                         <label for="start-year">Année de début:</label>
-                        <input type="date" id="start-year" name="start-year" required>
+                        <input type="date" id="start-year" name="start_year" autocomplete="off" required>
                     </div>
                     <div class="form-row">
                         <label for="end-year">Année de fin:</label>
-                        <input type="date" id="end-year" name="end-year" required>
+                        <input type="date" id="end-year" name="end_year" autocomplete="off" required>
                     </div>
                     <div class="form-row">
                         <label for="field-of-study">Domaine d'étude:</label>
-                        <input type="text" id="field-of-study" name="field" required>
+                        <input type="text" id="field-of-study" name="field" autocomplete="off" required>
                     </div>
                 </div>
                 <button type="button" id="add-education">Ajouter une formation</button>
@@ -128,7 +128,7 @@
                 <h2>Hobbies</h2>
                 <div class="form-row">
                     <label for="hobbies">Entrez vos hobbies, séparées par une virgule:</label>
-                    <input type="text" id="hobbies" name="hobbies">
+                    <input type="text" id="hobbies" name="hobbies" autocomplete="off">
                 </div>
             </div>
 
