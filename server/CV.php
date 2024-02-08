@@ -1,9 +1,11 @@
 <?php
 $nom = $_POST['name'];
 $prenom = $_POST['firstname'];
+$titre = $_POST['titre'];
 $mail = $_POST['email'];
 $numero = $_POST['phone'];
 $adresse = $_POST['address'];
+$resume = $_POST['apropos'];
 
 $competences = $_POST['skills'];
 

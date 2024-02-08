@@ -13,43 +13,45 @@
 <body>
     <div class="container">
         <div class="header">
-            <div class="name">John Doe</div>
-            <div class="title">Développeur Web Full Stack</div>
+            <div class="name"><?= "$nom $prenom"; ?></div>
+            <div class="title"><?= "$titre"; ?></div>
         </div>
 
         <div class="section">
             <h2>À propos de moi</h2>
-            <p>Passionné par le développement web depuis plusieurs années, je suis spécialisé dans la création d'applications web performantes et intuitives.</p>
+            <p><?= "$resume"; ?></p>
         </div>
 
         <div class="section">
             <h2>Expérience professionnelle</h2>
             <ul>
-                <li>Développeur Web chez ABC Company (2018 - présent)</li>
-                <li>Stagiaire en développement chez XYZ Agency (2017)</li>
+                <li><?= "$company, $poste, $date_debut, $date_fin, $tache"; ?></li>
             </ul>
         </div>
 
         <div class="section">
             <h2>Compétences</h2>
             <ul>
-                <li>HTML5 / CSS3 / JavaScript</li>
-                <li>PHP / MySQL</li>
-                <li>Frameworks: Bootstrap, jQuery</li>
-                <li>Version Control: Git</li>
+                <li><?= "$competences"; ?></li>
             </ul>
         </div>
 
         <div class="section">
             <h2>Formation</h2>
             <ul>
-                <li>Master en Informatique - Université ABC (2016 - 2018)</li>
-                <li>Licence en Informatique - Université XYZ (2013 - 2016)</li>
+                <li><?= "$ecole, $diplome, $annee_debut, $annee_fin, $domaine"; ?></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Hobbies</h2>
+            <ul>
+                <li><?= "$hobbies"; ?></li>
             </ul>
         </div>
 
         <div class="footer">
-            <p>Contact : john.doe@example.com | Téléphone : (123) 456-7890</p>
+            <p>Contact : <?= "$mail"; ?> | Téléphone : <?= "$numero"; ?> | Adresse : <?= "$adresse"; ?></p>
         </div>
     </div>
 </body>

@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="header">
-        <h1>CV Maker</h1>
+        <h1>Bienvenue sur le générateur de CV  <?php echo $_SESSION['username']; ?></h1>
         <a href="../../server/deconnexion.php"><button>Se déconnecter</button></a>
     </div>
 
@@ -34,8 +34,12 @@
                     <input type="text" id="name" name="name" required>
                 </div>
                 <div class="form-row">
-                    <label for="name">Prénom:</label>
-                    <input type="text" id="name" name="firstname" required>
+                    <label for="firstname">Prénom:</label>
+                    <input type="text" id="firstname" name="firstname" required>
+                </div>
+                <div class="form-row">
+                    <label for="titre">Titre:</label>
+                    <input type="text" id="titre" name="titre">
                 </div>
                 <div class="form-row">
                     <label for="address">Adresse:</label>
@@ -48,6 +52,10 @@
                 <div class="form-row">
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-row">
+                    <label for="apropos">A propos de moi:</label>
+                    <textarea id="apropos" name="apropos"></textarea>
                 </div>
             </div>
 
@@ -101,11 +109,11 @@
                     </div>
                     <div class="form-row">
                         <label for="start-year">Année de début:</label>
-                        <input type="text" id="start-year" name="start-year" required>
+                        <input type="date" id="start-year" name="start-year" required>
                     </div>
                     <div class="form-row">
                         <label for="end-year">Année de fin:</label>
-                        <input type="text" id="end-year" name="end-year" required>
+                        <input type="date" id="end-year" name="end-year" required>
                     </div>
                     <div class="form-row">
                         <label for="field-of-study">Domaine d'étude:</label>
@@ -125,7 +133,7 @@
             </div>
 
             <!-- Bouton de soumission du formulaire -->
-            <button type="submit" id="submit-button">Générer mon CV</button>
+            <button type="submit" id="submit-button" name="submit">Générer mon CV</button>
         </form>
     </div>
 </body>
