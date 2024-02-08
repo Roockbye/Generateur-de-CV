@@ -55,6 +55,82 @@ div.content:after {
     text-align: center;
     padding: 20px;
 }
+
+
+#cv-form {
+    width: 600px;
+    margin: 0 auto;
+  }
+  
+  .form-section {
+    margin-bottom: 20px;
+  }
+  
+  .form-section h2 {
+    margin-bottom: 10px;
+  }
+  
+  .form-row {
+    margin-bottom: 10px;
+  }
+  
+  .form-row label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-row input,
+  .form-row textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  
+  .form-row input[type="date"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-size: 14px;
+  }
+  
+  #submit-button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+  background-color: #3498db;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  #submit-button:hover {
+    background-color: #2980b9;
+  }
+  
+  #add-work-experience,
+  #add-education {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  #add-work-experience:hover,
+  #add-education:hover {
+    background-color: #2980b9;
+  }
+  
 /*responsive layout*/
 @media screen and (max-width:600px){
     div.column{

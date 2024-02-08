@@ -1,14 +1,25 @@
 <?php
-$nom = $_POST['txtNom'];
-$prenom = $_POST['txtPrenom'];
-$mail = $_POST['txtmail'];
-$numero = $_POST['txtnum'];
-$adresse = $_POST['txtad'];
+$nom = $_POST['name'];
+$prenom = $_POST['firstname'];
+$mail = $_POST['email'];
+$numero = $_POST['phone'];
+$adresse = $_POST['address'];
 
-$school = $_POST['txtschool'];
-$universite = $_POST['txtuni'];
-$diplome = $_POST['txtdi'];
-$experience = $_POST['txtpro'];
-$hobbies = $_POST['txthobbies'];
+$competences = $_POST['skills'];
+
+$company = $_POST['company'];
+$poste = $_POST['position'];
+$date_debut = $_POST['start-date'];
+$date_fin = $_POST['end-date'];
+$tache = $_POST['description'];
+
+
+$ecole = $_POST['school'];
+$diplome = $_POST['degree'];
+$annee_debut = $_POST['start-year'];
+$annee_fin = $_POST['end-year'];
+$domaine = $_POST['field'];
+
+$hobbies = $_POST['hobbies'];
 
 ?>
