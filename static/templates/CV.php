@@ -1,6 +1,4 @@
-<?php
-    include "../../server/CV.php";
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">

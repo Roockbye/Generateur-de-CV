@@ -1,9 +1,6 @@
 <?php 
     // Inclure le fichier principal
     include "../../server/mainpage.php";
-    $fn->authPage();
-    $cv = $db->query('SELECT * FROM cv WHERE id_user='.$fn->Auth()['id']);
-    $cv = $cv->fetch_all();
 ?>
 
 <!DOCTYPE html>
@@ -20,6 +17,18 @@
         <h1>Bienvenue sur le générateur de CV  <?php echo $_SESSION['username']; ?></h1>
         <a href="../../server/deconnexion.php"><button>Se déconnecter</button></a>
     </div>
+
+    <div class="nav">
+        <a href="#" class="active">Home</a>
+        <a href="#">Modèles</a>
+        <a href="#">Mes CVS</a>
+    </div>
+    <div>
+        <a href="template.php" class="text-decoration-none"><i class="bi bi-file-earmark-plus"></i>Add New</a>
+    </div>
+    <div class="text-center py-3 border rounded mt-3" style="background-color: rgba(236,236,236, 0.56);">
+    <i class="bi bi-file-text"></i> No resume available
+</div>
     <div class="bodyArea">
         <h2>Formulaire</h2>
         <form id="cv-form" name="data" action="template.php" method="post">
@@ -90,6 +99,49 @@
                     </div>
                 </div>
                 <div class="container">
+                <div>
+                <!-- Lien pour ouvrir la modal -->
+                <a class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#addexp">
+                <button  class="bi bi-file-earmark-plus" type="button" id="add-education">Ajouter une experience de travail</button>
+                </a>
+            </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="addexp" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Ajouter une expérience</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <form method="post" action="actions/addexperience.php" class="row g-3">
+  <div class="col-md-6">
+    <label for="company" class="form-label">Nom de l'entreprise:</label>
+    <input type="text" id="company" class="form-control" name="company" autocomplete="off" required>
+  </div>
+  <div class="col-md-6">
+    <label for="position" class="form-label">Poste occupé:</label>
+    <input type="text" id="position" name="position" class="form-control" autocomplete="off" required>
+  </div>
+  <div class="col-12">
+    <label for="start-date" class="form-label">Date de début:</label>
+    <input type="date" id="start-date" name="start_date" class="form-control" autocomplete="off" required>
+  </div>
+  <div class="col-12">
+    <label for="end-date" class="form-label">Date de fin:</label>
+    <input type="date" id="end-date" name="end_date" class="form-control" autocomplete="off" required>
+  </div>
+  <div class="col-md-6">
+    <label for="description" class="form-label">Description des tâches:</label>
+    <textarea id="description" name="description" class="form-control" autocomplete="off" required></textarea>
+  </div>
+                        <button type="submit" name="submit" class="btn btn-primary">Ajouter</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
             <!-- Section: Formation -->
@@ -119,6 +171,50 @@
                 </div>
 
                 <div class="container">
+                <div>
+                <!-- Lien pour ouvrir la modal -->
+                <a class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#addfor">
+                <button  class="bi bi-file-earmark-plus" type="button" id="add-education">Ajouter une formation</button>
+                </a>
+            </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="addfor" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Ajouter une formation</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <form method="post" action="actions/addformation.php" class="row g-3">
+                <div class="col-md-6">
+                <label for="school" class="form-label">Nom de l'école:</label>
+                <input type="text" id="school" name="school" class="form-control" autocomplete="off" required>
+                </div>
+                <div class="col-md-6">
+                <label for="degree" class="form-label">Diplôme obtenu:</label>
+                <input type="text" id="degree" name="degree" class="form-control" autocomplete="off" required>
+                </div>
+                <div class="col-12">
+                <label for="start-year" class="form-label">Année de début:</label>
+                <input type="date" id="start-year" name="start_year" class="form-control" autocomplete="off" required>
+                </div>
+                <div class="col-12">
+                <label for="end-year" class="form-label">Année de fin:</label>
+                <input type="date" id="end-year" name="end_year" class="form-control" autocomplete="off" required>
+                </div>
+                <div class="col-md-6">
+                <label for="field-of-study" class="form-label">Domaine d'étude:</label>
+                <input type="text" id="field-of-study" name="field" class="form-control" autocomplete="off" required>
+                </div>
+                        <button type="submit" name="submit" class="btn btn-primary">Ajouter</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
                 
 </div>
 
@@ -135,5 +231,7 @@
             <button type="submit" id="submit-button" name="submit">Générer mon CV</button>
         </form>
     </div>
+    <!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
