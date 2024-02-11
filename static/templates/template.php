@@ -20,7 +20,7 @@
                     <img src="../images/01.png" width="100%" height="100%" alt="">
                 </div>
               <div class="des">
-                    <h3><?= $cv_data['lastname'] . ' ' . $cv_data['firstname']; ?></h3>
+                    <h3><?= $nom . ' ' . $prenom; ?></h3>
                     <p class="post"><?= "$titre"; ?></p>
                 </div>
                 <div class="right">
@@ -41,8 +41,8 @@
      <h4>Diplômes et Formations</h4>
     <hr class="light">
        <div class="div">
-           <div><b> <?= "$diplome"; ?>
-           </b><strong><?= "$ecole";?></strong> <?= "$domaine"; ?> <br><?="$annee_debut, $annee_fin";?>
+           <div><b> <?= "$degree"; ?>
+           </b><strong><?= "$school";?></strong> <?= "$field"; ?> <br><?="$start_year, $end_year";?>
            </div>
            <br>
        </div>
@@ -50,9 +50,9 @@
     <h4>Expériences professionnelles</h4>
      <hr class="light">
         <div class="div">
-          <p><b><?="$poste";?></b> <strong><?="$company";?></strong><br>
-          <?="$date_debut, $date_fin"; ?><br>
-            <?="$tache";?>.
+          <p><b><?="$position";?></b> <strong><?="$company";?></strong><br>
+          <?="$start_date, $end_date"; ?><br>
+            <?="$description";?>.
           </p>
         </div>
 </section>
@@ -63,7 +63,7 @@
       <div class="skls">
 
                 <div class="po">
-                    <p><?= "$competences"; ?></p>
+                    <p><?= "$skills"; ?></p>
                     <div class="cool">
                         <div style="width:80%" class="inner"></div>
                     </div>

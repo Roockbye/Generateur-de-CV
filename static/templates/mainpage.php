@@ -1,9 +1,11 @@
 <?php 
     // Inclure le fichier principal
     include "../../server/mainpage.php";
+    /*
     $fn->authPage();
     $cv = $db->query('SELECT * FROM cv WHERE id_user='.$fn->Auth()['id']);
     $cv = $cv->fetch_all();
+    */
 ?>
 
 <!DOCTYPE html>
