@@ -14,7 +14,8 @@
 </head>
 <body>
     <main>
-    
+        <form action="../../server/download_cv.php" method="post">
+    <form action="mainpage.php" method="post">
        <header>
                 <div class="photo">
                     <img src="../images/01.png" width="100%" height="100%" alt="">
@@ -84,7 +85,11 @@
      <hr class="light">
      
     </main>
-    <a href="download_cv.php">Télécharger le CV</a>
+    
+    <input type="submit" value="Enregistrer le CV">
+</form>
+<button type="submit">Télécharger le CV</button>
+</form>
 </body>
 
 </html>

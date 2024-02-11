@@ -1,6 +1,7 @@
 <?php 
-    // Inclure le fichier principal
+    //include "../templates/template.php";
     include "../../server/mainpage.php";
+    //include "../../server/CV.php";
 ?>
 
 <!DOCTYPE html>
@@ -17,18 +18,6 @@
         <h1>Bienvenue sur le générateur de CV  <?php echo $_SESSION['username']; ?></h1>
         <a href="../../server/deconnexion.php"><button>Se déconnecter</button></a>
     </div>
-
-    <div class="nav">
-        <a href="#" class="active">Home</a>
-        <a href="#">Modèles</a>
-        <a href="#">Mes CVS</a>
-    </div>
-    <div>
-        <a href="template.php" class="text-decoration-none"><i class="bi bi-file-earmark-plus"></i>Add New</a>
-    </div>
-    <div class="text-center py-3 border rounded mt-3" style="background-color: rgba(236,236,236, 0.56);">
-    <i class="bi bi-file-text"></i> No resume available
-</div>
     <div class="bodyArea">
         <h2>Formulaire</h2>
         <form id="cv-form" name="data" action="template.php" method="post">
