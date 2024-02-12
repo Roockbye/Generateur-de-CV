@@ -7,7 +7,7 @@ try {
 
 if(isset($_FILES['photo'])){
     $tmpName = $_FILES['photo']['tmp_name'];
-    $photo = $_FILES['photo']['name']; // Correction
+    $photo = $_FILES['photo']['name'];
     $size = $_FILES['photo']['size'];
     $error = $_FILES['photo']['error'];
 
@@ -16,12 +16,13 @@ if(isset($_FILES['photo'])){
     $extensions = ['jpg', 'png', 'jpeg', 'gif'];
     
     if(in_array($extension, $extensions)){
-        move_uploaded_file($tmpName, '../upload'.$photo);
+        move_uploaded_file($tmpName, 'upload/'.$photo);
 
         $req = $db->prepare('INSERT INTO photo (photo) VALUES(?)');
-        $req->execute([$photo]); // Correction
+        $req->execute([$photo]);
 
         echo "Image enregistrée";
+        echo "<script>setTimeout(function(){ window.location.href = '../static/templates/template.php'; }, 2000);</script>";
     } else {
         echo "Mauvaise extension";
     }

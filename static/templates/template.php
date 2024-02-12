@@ -15,17 +15,16 @@
 </head>
 <body>
     <main>
-        <form action="../../server/download_cv.php" method="post">
+        
     <form action="mainpage.php" method="post">
        <header>
                 <div class="photo">
                     <?php
                     $req=$db->query('SELECT photo from photo');
                     while($data = $req->fetch()){
-                        echo '<img src="./upload/'.$data['photo'].'"width="200px">';
+                        echo '<img src="../../server/upload'.$data['photo'].'width="100%" height="100%" z-index="3.0">';
                     }
                     ?>
-                    <img src="../images/01.png" width="100%" height="100%" alt="">
                 </div>
               <div class="des">
                     <h3><?= $nom . ' ' . $prenom; ?></h3>
@@ -95,6 +94,7 @@
     
     <input type="submit" value="Enregistrer le CV">
 </form>
+<form action="../../server/download_cv.php" method="post">
 <button type="submit">Télécharger le CV</button>
 </form>
 <form action="../../server/photo.php" method="POST" enctype="multipart/form-data">

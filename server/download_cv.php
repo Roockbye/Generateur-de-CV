@@ -1,29 +1,16 @@
 <?php
-include "../lib/TCPDF-main/tcpdf.php";
+include "../lib/dompdf/vendor/autoload.php";
+include "../static/templates/template.php" . $template;
 
-// Créer une instance de la classe TCPDF
-$pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
+use Dompdf\Dompdf;
 
-// Définir les informations du document PDF
-$pdf->SetCreator(PDF_CREATOR);
-$pdf->SetAuthor('Votre nom');
-$pdf->SetTitle('CV');
-$pdf->SetSubject('CV au format PDF');
-$pdf->SetKeywords('CV, PDF, génération');
-
-// Définir les marges
-$pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
-$pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
-$pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
-
-// Définir le mode d'affichage et l'échelle
-$pdf->SetPrintHeader(false);
-$pdf->SetPrintFooter(false);
-$pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
-$pdf->SetFont('helvetica', '', 10);
-
-// Ajouter une page au document PDF
-$pdf->AddPage();
+    $dompdf = new Dompdf();
+    ob_start();
+    $html = ob_get_clean();
+    $dompdf->loadHtml($html);
+    $dompdf->setPaper('A4');
+    $dompdf->render();
+    $dompdf->stream('cv.pdf');
 
 $bdd = new PDO('mysql:host=localhost;dbname=db_cv;charset=utf8;','root',"");
     $nom = $_POST['lastname'];
@@ -68,14 +55,5 @@ $content = "
         <p><b>$hobbies</b></p>
     </section>
 ";
-
-// Ajouter le contenu au document PDF
-$pdf->writeHTML($content, true, false, true, false, '');
-
-// Nom du fichier PDF téléchargé
-$filename = 'CV.pdf';
-
-// Télécharger le fichier PDF
-$pdf->Output($filename, 'D');
 
 ?>
