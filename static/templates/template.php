@@ -1,6 +1,7 @@
 <?php
     include "../../server/CV.php";
     include "../../server/mainpage.php";
+    include "../../server/photo.php";
 ?>
 
 <!DOCTYPE html>
@@ -18,6 +19,12 @@
     <form action="mainpage.php" method="post">
        <header>
                 <div class="photo">
+                    <?php
+                    $req=$db->query('SELECT photo from photo');
+                    while($data = $req->fetch()){
+                        echo '<img src="./upload/'.$data['photo'].'"width="200px">';
+                    }
+                    ?>
                     <img src="../images/01.png" width="100%" height="100%" alt="">
                 </div>
               <div class="des">
@@ -89,6 +96,11 @@
     <input type="submit" value="Enregistrer le CV">
 </form>
 <button type="submit">Télécharger le CV</button>
+</form>
+<form action="../../server/photo.php" method="POST" enctype="multipart/form-data">
+    <label for="file">Fichier</label>
+    <input type="file" name="photo">
+    <button type="submit">Enregistrer</button>
 </form>
 </body>
 
