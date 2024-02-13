@@ -43,41 +43,51 @@ Suivez les étapes de création de compte, puis commencez à créer votre CV en 
 
 MLD:
 
-    Utilisateur :
-        ID_Utilisateur (PK, INT)
-        Nom (VARCHAR)
-        Prénom (VARCHAR)
-        Adresse_Email (VARCHAR)
-        Mot_de_passe (VARCHAR)
+    Users :
+        ID (PK, INT)
+        lastname (VARCHAR)
+        firstname (VARCHAR)
+        Email (VARCHAR)
+        password (VARCHAR)
+        username(VARCHAR)
+        phone (INT)
 
     CV :
-        ID_CV (PK, INT)
-        ID_Utilisateur (FK, INT)
-        Titre_CV (VARCHAR)
-        Date_Creation (DATE)
+        id (PK, INT)
+        id_user (FK, INT)
+        Titre (VARCHAR)
+        hobbies (VARCHAR)
+        address(VARCHAR)
+        apropos(VARCHAR)
+        updated(INT)
 
-    Expérience_Professionnelle :
-        ID_Expérience (PK, INT)
+    Expériences :
+        ID (PK, INT)
         ID_CV (FK, INT)
-        Entreprise (VARCHAR)
-        Poste (VARCHAR)
-        Date_Début (DATE)
-        Date_Fin (DATE)
+        company (VARCHAR)
+        Position (VARCHAR)
+        start_date (DATE)
+        end_date (DATE)
         Description (TEXT)
 
-    Parcours_Académique :
-        ID_Formation (PK, INT)
+    Education :
+        ID (PK, INT)
         ID_CV (FK, INT)
-        École (VARCHAR)
-        Diplôme (VARCHAR)
-        Domaine_Étude (VARCHAR)
-        Année_Début (DATE)
-        Année_Fin (DATE)
+        School (VARCHAR)
+        degree (VARCHAR)
+        field (VARCHAR)
+        start_year (DATE)
+        end_year (DATE)
 
-    Hobbies :
-        ID_Hobby (PK, INT)
+    Skills :
+        ID (PK, INT)
         ID_CV (FK, INT)
-        Description_Hobby (TEXT)
+        skills(VARCHAR)
+
+    Photo :
+        ID (PK, INT)
+        ID_CV (FK, INT)
+        photo(VARCHAR)
 
 
 *PK (Primary Key)
@@ -97,3 +107,6 @@ MLD:
 - Ajout de photo : Vous avez la possibilité d'ajouter une photo à votre CV lors de sa création ou de sa modification.
 
 - Génération de PDF : Une fois votre CV créé ou modifié, vous pouvez le générer au format PDF en un seul clic.
+
+
+...En cours

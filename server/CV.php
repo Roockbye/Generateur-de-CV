@@ -30,9 +30,11 @@ try {
 // Vérifier si le formulaire a été soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Vérifier si toutes les données requises sont présentes
-    if (isset($_POST['lastname'], $_POST['firstname'], $_POST['titre'], $_POST['email'], $_POST['phone'], $_POST['address'], $_POST['apropos'], $_POST['hobbies'])) {
+    if (isset($_POST['lastname'], $_POST['firstname'], $_POST['titre'], $_POST['email'], $_POST['phone'],
+    $_POST['address'], $_POST['apropos'], $_POST['hobbies'])) {
         // Préparer la requête d'insertion
-        $query = $db->prepare('INSERT INTO cv (lastname, firstname, titre, email, phone, address, apropos, hobbies) VALUES (?, ?, ?, ?, ?, ?, ?, ?)');
+        $query = $db->prepare('INSERT INTO cv (lastname, firstname, titre, email, phone,
+        address, apropos, hobbies) VALUES (?, ?, ?, ?, ?, ?, ?, ?)');
         
         // Exécuter la requête avec les valeurs des champs du formulaire
         try {
@@ -48,7 +50,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Vérifier si toutes les données requises pour "education" sont présentes
     if (isset($_POST['school'], $_POST['degree'], $_POST['start_year'], $_POST['end_year'], $_POST['field'])) {
         // Préparer la requête d'insertion pour "education"
-        $query_education = $db->prepare('INSERT INTO education (school, degree, start_year, end_year, field) VALUES (?, ?, ?, ?, ?)');
+        $query_education = $db->prepare('INSERT INTO education (school, degree, start_year, end_year, field)
+        VALUES (?, ?, ?, ?, ?)');
         
         // Exécuter la requête pour "education" avec les valeurs des champs du formulaire
         try {
@@ -62,9 +65,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
      // Vérifier si toutes les données requises pour "experiences" sont présentes
-     if (isset($_POST['company'], $_POST['position'], $_POST['start_date'], $_POST['end_date'], $_POST['description'])) {
+     if (isset($_POST['company'], $_POST['position'], $_POST['start_date'], $_POST['end_date'],
+     $_POST['description'])) {
         // Préparer la requête d'insertion pour "experiences"
-        $query_experiences = $db->prepare('INSERT INTO experiences (company, position, start_date, end_date, description) VALUES (?, ?, ?, ?, ?)');
+        $query_experiences = $db->prepare('INSERT INTO experiences (company, position, start_date,
+        end_date, description) VALUES (?, ?, ?, ?, ?)');
         
         // Exécuter la requête pour "experiences" avec les valeurs des champs du formulaire
         try {
@@ -92,8 +97,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Tous les champs requis des compétences doivent être remplis.";
     }
-
-
 }
-
 ?>

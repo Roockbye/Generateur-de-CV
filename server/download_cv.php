@@ -10,7 +10,6 @@ try {
 } catch (PDOException $e) {
     die("Erreur : " . $e->getMessage());
 }
-
     $nom = $_POST['lastname'];
     $prenom = $_POST['firstname'];
     $titre = $_POST['titre'];
@@ -43,8 +42,6 @@ use Dompdf\Dompdf;
     $dompdf->render();
     $dompdf->stream('cv.pdf');
 
-
-
 $content = "
     <header>
         <h3>$nom $prenom</h3>
@@ -66,6 +63,4 @@ $content = "
         <p><b>$hobbies</b></p>
     </section>
 ";
-
-
 ?>

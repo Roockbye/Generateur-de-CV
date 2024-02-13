@@ -10,7 +10,7 @@ if(isset($_POST['submit'])){
         $password = $_POST['password'];
         $email = $_POST['email'];
 
-        $recupUser = $bdd->prepare('SELECT username, email, password 
+        $recupUser = $bdd->prepare('SELECT username, email, password
         FROM users WHERE username = ? OR password = ? OR email = ?');
         $recupUser->execute(array($username, $password, $email));
 
@@ -24,8 +24,7 @@ if(isset($_POST['submit'])){
             //exit();
         }else{
             echo "Votre mot de passe ou pseudo est incorrecte";
-        }
-            
+        }    
     } else {
         //URL Redirection
         echo "<p style='color:Red;'> Veuillez compléter tous les champs";

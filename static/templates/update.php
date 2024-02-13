@@ -3,7 +3,6 @@
     include "../../server/mainpage.php";
     //include "../../server/CV.php";
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,7 +52,6 @@
                     <textarea id="apropos" name="apropos" autocomplete="off"></textarea>
                 </div>
             </div>
-
             <!-- Section: Compétences -->
             <div class="form-section">
                 <h2>Compétences</h2>
@@ -62,7 +60,6 @@
                     <input type="text" id="skills" name="skills" autocomplete="off" required>
                 </div>
             </div>
-
             <!-- Section: Expérience de travail -->
             <div class="form-section">
                 <h2>Expérience de travail</h2>
@@ -94,7 +91,6 @@
                 <button  class="bi bi-file-earmark-plus" type="button" id="add-education">Ajouter une experience de travail</button>
                 </a>
             </div>
-
     <!-- Modal -->
     <div class="modal fade" id="addexp" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -105,26 +101,26 @@
                 </div>
                 <div class="modal-body">
                 <form method="post" action="actions/addexperience.php" class="row g-3">
-  <div class="col-md-6">
-    <label for="company" class="form-label">Nom de l'entreprise:</label>
-    <input type="text" id="company" class="form-control" name="company" autocomplete="off" required>
-  </div>
-  <div class="col-md-6">
-    <label for="position" class="form-label">Poste occupé:</label>
-    <input type="text" id="position" name="position" class="form-control" autocomplete="off" required>
-  </div>
-  <div class="col-12">
-    <label for="start-date" class="form-label">Date de début:</label>
-    <input type="date" id="start-date" name="start_date" class="form-control" autocomplete="off" required>
-  </div>
-  <div class="col-12">
-    <label for="end-date" class="form-label">Date de fin:</label>
-    <input type="date" id="end-date" name="end_date" class="form-control" autocomplete="off" required>
-  </div>
-  <div class="col-md-6">
-    <label for="description" class="form-label">Description des tâches:</label>
-    <textarea id="description" name="description" class="form-control" autocomplete="off" required></textarea>
-  </div>
+                <div class="col-md-6">
+                    <label for="company" class="form-label">Nom de l'entreprise:</label>
+                    <input type="text" id="company" class="form-control" name="company" autocomplete="off" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="position" class="form-label">Poste occupé:</label>
+                    <input type="text" id="position" name="position" class="form-control" autocomplete="off" required>
+                </div>
+                <div class="col-12">
+                    <label for="start-date" class="form-label">Date de début:</label>
+                    <input type="date" id="start-date" name="start_date" class="form-control" autocomplete="off" required>
+                </div>
+                <div class="col-12">
+                    <label for="end-date" class="form-label">Date de fin:</label>
+                    <input type="date" id="end-date" name="end_date" class="form-control" autocomplete="off" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="description" class="form-label">Description des tâches:</label>
+                    <textarea id="description" name="description" class="form-control" autocomplete="off" required></textarea>
+                </div>
                         <button type="submit" name="submit" class="btn btn-primary">Ajouter</button>
                     </form>
                 </div>
@@ -132,7 +128,6 @@
         </div>
     </div>
 </div>
-
             <!-- Section: Formation -->
             <div class="form-section">
                 <h2>Formation</h2>
@@ -158,7 +153,6 @@
                         <input type="text" id="field-of-study" name="field" autocomplete="off" required>
                     </div>
                 </div>
-
                 <div class="container">
                 <div>
                 <!-- Lien pour ouvrir la modal -->
@@ -166,7 +160,6 @@
                 <button  class="bi bi-file-earmark-plus" type="button" id="add-education">Ajouter une formation</button>
                 </a>
             </div>
-
     <!-- Modal -->
     <div class="modal fade" id="addfor" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -203,10 +196,8 @@
             </div>
         </div>
     </div>
+</div>         
 </div>
-                
-</div>
-
             <!-- Section: Hobbies -->
             <div class="form-section">
                 <h2>Hobbies</h2>
@@ -215,7 +206,6 @@
                     <input type="text" id="hobbies" name="hobbies" autocomplete="off">
                 </div>
             </div>
-
             <!-- Bouton de soumission du formulaire -->
             <button type="submit" id="submit-button" name="submit">Générer mon CV</button>
         </form>

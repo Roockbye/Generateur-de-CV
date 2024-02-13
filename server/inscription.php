@@ -11,6 +11,5 @@ if(isset($_POST['submit'])){
     $insert = $bdd->prepare('INSERT INTO users(firstname, lastname, username,
     phone, email, password) VALUE(?, ?, ?, ?, ?, ?)');
     $insert->execute(array($firstname, $lastname, $username, $phone, $email, $password));
-}
-        
+}   
 ?>

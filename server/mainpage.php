@@ -12,4 +12,3 @@ if (isset($_SESSION['id_cv'])) {
         echo "<p>Aucun CV enregistré.</p>";
     }
 ?>
-

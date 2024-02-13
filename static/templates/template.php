@@ -34,7 +34,7 @@
                         <p><img src="../images/mail.png" class="info"><?= "$mail"; ?></p>
                         <p><img src="../images/maps.png" class="info"><?= "$adresse"; ?></p>
                         <p><img src="../images/tele.png" class="info"><?= "$numero"; ?></p>
-                </div> 
+                </div>
        </header>
     <section class="section-left">
     <h4>À propos de moi</h4>

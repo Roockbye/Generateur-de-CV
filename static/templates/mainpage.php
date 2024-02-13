@@ -2,7 +2,6 @@
     // Inclure le fichier principal
     include "../../server/mainpage.php";
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,7 +51,6 @@
                     <textarea id="apropos" name="apropos" autocomplete="off"></textarea>
                 </div>
             </div>
-
             <!-- Section: Compétences -->
             <div class="form-section">
                 <h2>Compétences</h2>
@@ -61,7 +59,6 @@
                     <input type="text" id="skills" name="skills" autocomplete="off" required>
                 </div>
             </div>
-
             <!-- Section: Expérience de travail -->
             <div class="form-section">
                 <h2>Expérience de travail</h2>
@@ -87,8 +84,7 @@
                     </div>
                 </div>
                 <div class="container">
-</div>
-
+            </div>
             <!-- Section: Formation -->
             <div class="form-section">
                 <h2>Formation</h2>
@@ -114,11 +110,8 @@
                         <input type="text" id="field-of-study" name="field" autocomplete="off" required>
                     </div>
                 </div>
-
                 <div class="container">
-                
-</div>
-
+            </div>
             <!-- Section: Hobbies -->
             <div class="form-section">
                 <h2>Hobbies</h2>
@@ -127,7 +120,6 @@
                     <input type="text" id="hobbies" name="hobbies" autocomplete="off">
                 </div>
             </div>
-
             <!-- Bouton de soumission du formulaire -->
             <button type="submit" id="submit-button" name="submit">Générer mon CV</button>
         </form>
