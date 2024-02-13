@@ -1,9 +1,9 @@
 <?php
     include "../../server/CV.php";
     include "../../server/mainpage.php";
-    include "../../server/photo.php";
+    //include "../../server/photo.php";
+    //include "../../server/download_cv.php";
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,15 +15,15 @@
 </head>
 <body>
     <main>
-        
-    <form action="mainpage.php" method="post">
        <header>
                 <div class="photo">
                     <?php
+                    if (isset($db)) {
                     $req=$db->query('SELECT photo from photo');
                     while($data = $req->fetch()){
                         echo '<img src="../../server/upload'.$data['photo'].'width="100%" height="100%" z-index="3.0">';
                     }
+                }
                     ?>
                 </div>
               <div class="des">
@@ -36,15 +36,12 @@
                         <p><img src="../images/tele.png" class="info"><?= "$numero"; ?></p>
                 </div> 
        </header>
-
-
-<section class="section-left">
+    <section class="section-left">
     <h4>À propos de moi</h4>
     <hr class="light">
      <div class="atouts">
          <div><?= "$resume"; ?></div>
      </div>
-
      <h4>Diplômes et Formations</h4>
     <hr class="light">
        <div class="div">
@@ -53,7 +50,6 @@
            </div>
            <br>
        </div>
-
     <h4>Expériences professionnelles</h4>
      <hr class="light">
         <div class="div">
@@ -63,12 +59,10 @@
           </p>
         </div>
 </section>
-
 <section class="section-right">
     <h4>Competences</h4>
     <hr class="light">
       <div class="skls">
-
                 <div class="po">
                     <p><?= "$skills"; ?></p>
                     <div class="cool">
@@ -76,22 +70,17 @@
                     </div>
                 </div>
             </div>
-
     <h4>Centres d'intérêt</h4>
      <hr class="light">
      <div class="interet">
           <div><b><?= "$hobbies"; ?></b></div>
      </div>
 </section>
-
-
         <div class="srkl">
-
         </div>
      <hr class="light">
-     
     </main>
-    
+    <form action="mainpage.php" method="post">
     <input type="submit" value="Enregistrer le CV">
 </form>
 <form action="../../server/download_cv.php" method="post">
@@ -103,5 +92,4 @@
     <button type="submit">Enregistrer</button>
 </form>
 </body>
-
 </html>

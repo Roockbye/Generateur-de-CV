@@ -15,10 +15,10 @@
       <div class="container a-container" id="a-container">
           <form method="post" action ="">
             <h2 class="switch__title title">Bienvenue  !</h2>
-            <input class="form__input" type="text" name="firstname" autocomplete="off" placeholder=" Firstname">
-            <input class="form__input" type="text" name="lastname" autocomplete="off" placeholder="Lastname">
-            <input class="form__input" type="text" name="username" autocomplete="off" placeholder="Username">
-            <input class="form__input" type="text" name="phone" autocomplete="off" placeholder="Phone">
+            <input class="form__input" type="text" name="firstname" autocomplete="off" placeholder="Prénom">
+            <input class="form__input" type="text" name="lastname" autocomplete="off" placeholder="Nom">
+            <input class="form__input" type="text" name="username" autocomplete="off" placeholder="Nom d'utilisateur">
+            <input class="form__input" type="text" name="phone" autocomplete="off" placeholder="Telephone">
             <input class="form__input" type="text" name="email" autocomplete="off" placeholder="Email">
             <input class="form__input" type="password" name="password" autocomplete="off" placeholder="Mot de Passe">
             <input class="form__input" type="password" name="check-psw" autocomplete="off" placeholder="Confirmer mot de passe">

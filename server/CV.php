@@ -1,6 +1,4 @@
 <?php
-
-
 // Connexion à la base de données
 try {
     $db = new PDO('mysql:host=localhost;dbname=db_cv;charset=utf8', 'root', '');

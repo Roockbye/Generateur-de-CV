@@ -1,18 +1,16 @@
 <?php
 include "../lib/dompdf/vendor/autoload.php";
-include "../static/templates/template.php" . $template;
+include "CV.php";
+//include "../static/templates/template.php" . $content;
 
-use Dompdf\Dompdf;
 
-    $dompdf = new Dompdf();
-    ob_start();
-    $html = ob_get_clean();
-    $dompdf->loadHtml($html);
-    $dompdf->setPaper('A4');
-    $dompdf->render();
-    $dompdf->stream('cv.pdf');
+try {
+    $db = new PDO('mysql:host=localhost;dbname=db_cv;charset=utf8', 'root', '');
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Erreur : " . $e->getMessage());
+}
 
-$bdd = new PDO('mysql:host=localhost;dbname=db_cv;charset=utf8;','root',"");
     $nom = $_POST['lastname'];
     $prenom = $_POST['firstname'];
     $titre = $_POST['titre'];
@@ -33,7 +31,20 @@ $bdd = new PDO('mysql:host=localhost;dbname=db_cv;charset=utf8;','root',"");
     $field = $_POST['field'];
     $hobbies = $_POST['hobbies'];
 
-// Générer le contenu du CV au format HTML
+use Dompdf\Dompdf;
+
+    $html_content = $content;
+
+    $dompdf = new Dompdf();
+    ob_start();
+    $html = ob_get_clean();
+    $dompdf->loadHtml($html);
+    $dompdf->setPaper('A4');
+    $dompdf->render();
+    $dompdf->stream('cv.pdf');
+
+
+
 $content = "
     <header>
         <h3>$nom $prenom</h3>
@@ -55,5 +66,6 @@ $content = "
         <p><b>$hobbies</b></p>
     </section>
 ";
+
 
 ?>
